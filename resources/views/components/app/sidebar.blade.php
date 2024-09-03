@@ -1,13 +1,23 @@
-<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 bg-slate-900 fixed-start " id="sidenav-main">
+
+<style>
+    .nav-link-text{
+        text-wrap: wrap;
+    }
+    ::-webkit-scrollbar {
+    display: none;
+}
+
+</style>
+<aside  class="sidenav navbar navbar-vertical navbar-expand-xs border-0 bg-slate-900 fixed-start "  style="display:block;position:fixed;top:0;bottom:0;;max-width:20rem!important;overflow-y:hidden;padding:0;box-shadow:none; height: 100vh !important;overflow: hidden !important;  ">
     <div class="sidenav-header">
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
             aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand d-flex align-items-center m-0"
-            href=" https://demos.creative-tim.com/corporate-ui-dashboard/pages/dashboard.html " target="_blank">
-            <span class="font-weight-bold text-lg">SAMPLE LARAVEL</span>
+            href="#" target="_blank">
+            <span class="font-weight-bold text-lg">ប្រព័ន្ធគ្រប់គ្រងទិន្នន័យសមាជិកបក្ស</span>
         </a>
     </div>
-    <div class="collapse navbar-collapse px-4  w-auto " id="sidenav-collapse-main">
+    <div class="collapse navbar-collapse px-4 " id="sidenav-collapse-main" style="height: 100vh; overflow: hidden !important;overflow-x: hidden; width: 100% !important; ">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link  {{ is_current_route('dashboard') ? 'active' : '' }}"
@@ -16,7 +26,7 @@
                         class="icon icon-shape icon-sm px-0 text-center d-flex align-items-center justify-content-center">
                         <svg width="30px" height="30px" viewBox="0 0 48 48" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <title>dashboard</title>
+                            <title>ផ្ទាំងទិន្នន័យសង្ខេប</title>
                             <g id="dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <g id="template" transform="translate(12.000000, 12.000000)" fill="#FFFFFF"
                                     fill-rule="nonzero">
@@ -33,11 +43,11 @@
                             </g>
                         </svg>
                     </div>
-                    <span class="nav-link-text ms-1">Dashboard</span>
+                    <span class="nav-link-text ms-1">ផ្ទាំងទិន្នន័យសង្ខេប</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link  {{ is_current_route('tables') ? 'active' : '' }}" href="{{ route('tables') }}">
+                <a class="nav-link  {{ is_current_route('members.create') ? 'active' : '' }}" href="{{ route('members.create') }}">
                     <div
                         class="icon icon-shape icon-sm px-0 text-center d-flex align-items-center justify-content-center">
                         <svg width="30px" height="30px" viewBox="0 0 48 48" version="1.1"
@@ -62,7 +72,7 @@
                             </g>
                         </svg>
                     </div>
-                    <span class="nav-link-text ms-1">Tables</span>
+                    <span class="nav-link-text ms-1">បញ្ជូលទិន្នន័យ</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -84,7 +94,7 @@
                             </g>
                         </svg>
                     </div>
-                    <span class="nav-link-text ms-1">Wallet</span>
+                    <span class="nav-link-text ms-1">បញ្ជីសមាជិក</span>
                 </a>
             </li>
             <li class="nav-item mt-2">
@@ -95,19 +105,19 @@
                             d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
                             clip-rule="evenodd" />
                     </svg>
-                    <span class="font-weight-normal text-md ms-2">Laravel Examples</span>
+                    <span class="font-weight-normal text-md ms-2">របាយការណ៍</span>
                 </div>
             </li>
             <li class="nav-item border-start my-0 pt-2">
                 <a class="nav-link position-relative ms-0 ps-2 py-2 {{ is_current_route('users.profile') ? 'active' : '' }}"
                     href="{{ route('users.profile') }}">
-                    <span class="nav-link-text ms-1">User Profile</span>
+                    <span class="nav-link-text ms-1" style="text-wrap: wrap"> បញ្ជីរាយនាមសមាជិកគណបក្សប្រជាជនកម្ពុជា</span>
                 </a>
             </li>
             <li class="nav-item border-start my-0 pt-2">
                 <a class="nav-link position-relative ms-0 ps-2 py-2 {{ is_current_route('users-management') ? 'active' : '' }}"
                     href="{{ route('users-management') }}">
-                    <span class="nav-link-text ms-1">User Management</span>
+                    <span class="nav-link-text ms-1 " style="text-wrap: wrap"> បញ្ជីរាយនាមប្រជាពលរដ្ធមិនទាន់ចូលជាសមាជិកគណបក្សប្រជាជនកម្ពុជា</span>
                 </a>
             </li>
             <li class="nav-item mt-2">
@@ -118,27 +128,22 @@
                             d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
                             clip-rule="evenodd" />
                     </svg>
-                    <span class="font-weight-normal text-md ms-2">Account Pages</span>
+                    <span class="font-weight-normal text-md ms-2">ការកំណត់ក្នុងប្រព័ន្ធ</span>
                 </div>
             </li>
             <li class="nav-item border-start my-0 pt-2">
                 <a class="nav-link position-relative ms-0 ps-2 py-2 {{ is_current_route('profile') ? 'active' : '' }}"
                     href="{{ route('profile') }}">
-                    <span class="nav-link-text ms-1">Profile</span>
+                    <span class="nav-link-text ms-1">អ្នកប្រើប្រាស់ក្នុងប្រព័ន្ធ</span>
                 </a>
             </li>
             <li class="nav-item border-start my-0 pt-2">
-                <a class="nav-link position-relative ms-0 ps-2 py-2 {{ is_current_route('signin') ? 'active' : '' }}"
-                    href="{{ route('signin') }}">
-                    <span class="nav-link-text ms-1">Sign In</span>
+                <a class="nav-link position-relative ms-0 ps-2 py-2 {{ is_current_route('commune') ? 'active' : '' }}"
+                    href="{{ route('commune') }}">
+                    <span class="nav-link-text ms-1">ឃុំ/សង្កាត់ ភូមិ ក្រុម</span>
                 </a>
             </li>
-            <li class="nav-item border-start my-0 pt-2">
-                <a class="nav-link position-relative ms-0 ps-2 py-2 {{ is_current_route('signup') ? 'active' : '' }}"
-                    href="{{ route('signup') }}">
-                    <span class="nav-link-text ms-1">Sign Up</span>
-                </a>
-            </li>
+
         </ul>
     </div>
 </aside>

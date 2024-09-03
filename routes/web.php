@@ -7,7 +7,9 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
-
+use App\Http\Controllers\MemberController;
+use App\Http\Controllers\Dashboard;
+use App\Http\Controllers\SettingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,71 +21,89 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 |
 */
 
-Route::get('/', function () {
-    return redirect('/dashboard');
-})->middleware('auth');
+// Public Routes for Authentication and Registration
+Route::middleware('guest')->group(function () {
+    Route::get('/signin', function () {
+        return view('account-pages.signin');
+    })->name('signin');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard')->middleware('auth');
+    Route::get('/signup', function () {
+        return view('account-pages.signup');
+    })->name('signup');
 
-Route::get('/tables', function () {
-    return view('tables');
-})->name('tables')->middleware('auth');
+    Route::get('/sign-up', [RegisterController::class, 'create'])
+        ->name('sign-up');
 
-Route::get('/wallet', function () {
-    return view('wallet');
-})->name('wallet')->middleware('auth');
+    Route::post('/sign-up', [RegisterController::class, 'store']);
 
-Route::get('/RTL', function () {
-    return view('RTL');
-})->name('RTL')->middleware('auth');
+    Route::get('/sign-in', [LoginController::class, 'create'])
+        ->name('sign-in');
 
-Route::get('/profile', function () {
-    return view('account-pages.profile');
-})->name('profile')->middleware('auth');
+    Route::post('/sign-in', [LoginController::class, 'store']);
 
-Route::get('/signin', function () {
-    return view('account-pages.signin');
-})->name('signin');
+    Route::get('/forgot-password', [ForgotPasswordController::class, 'create'])
+        ->name('password.request');
 
-Route::get('/signup', function () {
-    return view('account-pages.signup');
-})->name('signup')->middleware('guest');
+    Route::post('/forgot-password', [ForgotPasswordController::class, 'store'])
+        ->name('password.email');
 
-Route::get('/sign-up', [RegisterController::class, 'create'])
-    ->middleware('guest')
-    ->name('sign-up');
+    Route::get('/reset-password/{token}', [ResetPasswordController::class, 'create'])
+        ->name('password.reset');
 
-Route::post('/sign-up', [RegisterController::class, 'store'])
-    ->middleware('guest');
+    Route::post('/reset-password', [ResetPasswordController::class, 'store']);
+});
 
-Route::get('/sign-in', [LoginController::class, 'create'])
-    ->middleware('guest')
-    ->name('sign-in');
+// Authenticated Routes
+Route::middleware('auth')->group(function () {
+    Route::get('/', function () {
+        return redirect('/dashboard');
+    });
 
-Route::post('/sign-in', [LoginController::class, 'store'])
-    ->middleware('guest');
 
-Route::post('/logout', [LoginController::class, 'destroy'])
-    ->middleware('auth')
-    ->name('logout');
 
-Route::get('/forgot-password', [ForgotPasswordController::class, 'create'])
-    ->middleware('guest')
-    ->name('password.request');
+    Route::get('/tables', function () {
+        return view('tables');
+    })->name('tables');
 
-Route::post('/forgot-password', [ForgotPasswordController::class, 'store'])
-    ->middleware('guest')
-    ->name('password.email');
+    Route::get('/wallet', function () {
+        return view('wallet');
+    })->name('wallet');
 
-Route::get('/reset-password/{token}', [ResetPasswordController::class, 'create'])
-    ->middleware('guest')
-    ->name('password.reset');
 
-Route::post('/reset-password', [ResetPasswordController::class, 'store'])
-    ->middleware('guest');
+    Route::get('/profile', function () {
+        return view('account-pages.profile');
+    })->name('profile');
 
-Route::get('/laravel-examples/user-profile', [ProfileController::class, 'index'])->name('users.profile')->middleware('auth');
-Route::put('/laravel-examples/user-profile/update', [ProfileController::class, 'update'])->name('users.update')->middleware('auth');
-Route::get('/laravel-examples/users-management', [UserController::class, 'index'])->name('users-management')->middleware('auth');
+    Route::post('/logout', [LoginController::class, 'destroy'])
+        ->name('logout');
+
+    Route::get('/laravel-examples/user-profile', [ProfileController::class, 'index'])
+        ->name('users.profile');
+
+    Route::put('/laravel-examples/user-profile/update', [ProfileController::class, 'update'])
+        ->name('users.update');
+
+    Route::get('/laravel-examples/users-management', [UserController::class, 'index'])
+        ->name('users-management');
+
+
+
+    Route::prefix('members')->group(function () {
+    Route::get('/', [MemberController::class, 'create'])->name('members.create');
+    // Route::get('{id}', [MemberController::class, 'show'])->name('members.show');
+    // Route::post('/', [MemberController::class, 'store'])->name('members.store');
+    // Route::put('{id}', [MemberController::class, 'update'])->name('members.update');
+    // Route::delete('{id}', [MemberController::class, 'destroy'])->name('members.destroy');
+    });
+
+    Route::prefix('/dashboard')->group(function(){
+        Route::get('/', [Dashboard::class, 'index'])->name('dashboard');
+    });
+
+    Route::prefix('/settings')->group(function(){
+        Route::get('/commune', [SettingController::class, 'commune'])->name('commune');
+    });
+
+
+
+});

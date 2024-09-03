@@ -34,7 +34,7 @@
                                 </g>
                             </g>
                         </svg>
-                        Dashboard
+                        ផ្ទាំងទិន្នន័យសង្ខេប
                     </a>
                 </li>
                 <li class="nav-item">

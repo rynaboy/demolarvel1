@@ -12,12 +12,22 @@ License - nucleoapp.com/license/
   font-style: normal;
 }
 
+@font-face {
+    font-family:'BattambangKhmer';
+    src: url('../Battambang-Regular.ttf') format('ttf');
+    font-style: 'normal';
+    font-weight: '700';
+  }
+*{
+    font-family:'BattambangKhmer';
+}
 /*------------------------
     base class definition
 -------------------------*/
 .ni {
   display: inline-block;
   font: normal normal normal 14px/1 NucleoIcons;
+  font-family: 'BattambangKhmer';
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
