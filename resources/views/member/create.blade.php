@@ -83,9 +83,7 @@
                 <div class="col-md-6 col-lg-3 mb-3">
                     <p>ព័ត៍មានលំអិត</p>
                     <div class="mb-3">
-                        <label for="outside" class="form-label">ក្រៅ</label>
-                        <input type="text" class="form-control" id="outside">
-                    </div>
+                                            </div>
                     <div class="mb-3">
                         <label for="village" class="form-label">ចំណាកឃុំ</label>
                         <input type="text" class="form-control" id="village">
@@ -104,6 +102,12 @@
                         <label for="phone_other" class="form-label">ទូរស័ព្ទ/ផ្សេងៗ</label>
                         <textarea class="form-control" id="phone_other"></textarea>
                     </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            ក្រៅ
+                        </label>
+                      </div>
 
                 </div>
             </div>

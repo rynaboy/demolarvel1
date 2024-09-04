@@ -16,14 +16,20 @@ return new class extends Migration
             $table->timestamps();
             $table->integer("family_id");
             $table->integer("house_id");
-            $table->string("member_name");
-            $table->string("member_gender");
-            $table->date("member_birthday");
 
-            $table->date("member_date_in");
-            $table->string("member_role");
-            $table->string("member_id_number");
+            //ព័ត៍មានបថម
+            $table->string("member_id_number"); //លេខអត្តសញ្ញាណបណ្ណ
+            $table->string("member_name");      //នាមត្រកូល និងនាមខ្លួន
+            $table->string("member_gender");    //ភេទ
+            $table->date("member_birthday");    //ឆ្នាំកំណើត
 
+
+            //ព័ត៍មានគណបក្ស
+            $table->date("member_date_in");     //ថ្ងៃចូលបក្ស
+            $table->string("member_role");      //តួនាទីបក្ស
+
+
+            //ព័ត៍មានបោះឆ្នោត
             $table->string("member_others");
             $table->string("member_profile_img");
 
