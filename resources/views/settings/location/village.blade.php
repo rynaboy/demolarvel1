@@ -41,7 +41,7 @@ $commune = [
                         <div class="card-header border-bottom pb-0">
                             <div class="d-sm-flex align-items-center">
                                 <div>
-                                    <h6 class="font-weight-semibold text-lg mb-0">បញ្ជីឃុំ/សង្កាត់</h6>
+                                    <h6 class="font-weight-semibold text-lg mb-0">បញ្ជីភូមិ</h6>
                                     {{-- <p class="text-sm">See information about all members</p> --}}
                                 </div>
                                 <div class="ms-auto d-flex">
@@ -87,9 +87,7 @@ $commune = [
                                                 ឈ្មោះជាភាសាខ្មែរ</th>
                                             <th class="text-secondary text-xs font-weight-semibold opacity-7 ps-2">
                                                 ឈ្មោះ</th>
-                                            <th
-                                                class="text-center text-secondary text-xs font-weight-semibold opacity-7">
-                                                ចំនួនភូមិ</th>
+
                                                 <th
                                                 class="text-center text-secondary text-xs font-weight-semibold opacity-7">
                                                 សកម្មភាព</th>
@@ -97,11 +95,10 @@ $commune = [
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach ($commune as $com) {
+                                        <?php foreach ($village as $com) {
                                            $name = $com['name'];
                                            $khmer_name = $com['khmer_name'];
                                            $code = $com['code'];
-                                           $total = $com['total_village'];
                                         ?>
    <tr style="cursor: pointer" onclick="navigateToVillage('<?=$code ?>')">
         <td>
@@ -119,10 +116,7 @@ $commune = [
         <td>
             <p class="text-sm text-dark font-weight-semibold mb-0"><?=$name ?></p>
         </td>
-        <td class="align-middle text-center text-sm">
-            <span
-                class="badge badge-sm border border-success text-success bg-success"><?=$total ?></span>
-        </td>
+
 
         <td class="" style="text-align: center">
             <a href="javascript:;" class="text-secondary font-weight-bold text-xs"

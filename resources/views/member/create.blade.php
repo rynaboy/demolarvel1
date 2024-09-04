@@ -97,7 +97,8 @@
                     </div>
                     <div class="mb-3">
                         <label for="village" class="form-label">គ្រួសារទី</label>
-                        <input type="text" class="form-control" id="village">
+
+                        <input type="number" class="form-control" id="village">
                     </div>
                     <div class="mb-3">
                         <label for="phone_other" class="form-label">ទូរស័ព្ទ/ផ្សេងៗ</label>

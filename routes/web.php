@@ -102,6 +102,8 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('/settings')->group(function(){
         Route::get('/commune', [SettingController::class, 'commune'])->name('commune');
+        Route::get('/village/{id}', [SettingController::class, 'village'])->name('village');
+
     });
 
 
