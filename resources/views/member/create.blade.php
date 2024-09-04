@@ -10,7 +10,7 @@
                     <p>ព័ត៍មានបថម</p>
                     <div class="mb-3">
                         <label for="id_number" class="form-label">លេខអត្តសញ្ញាណបណ្ណ</label>
-                        <input type="text" class="form-control" id="id_number">
+                        <input type="text" class="form-control" id="member_id_number" name="member_id_number">
                     </div>
                     <div class="mb-3">
                         <label for="name" class="form-label">នាមត្រកូល និងនាមខ្លួន</label>
