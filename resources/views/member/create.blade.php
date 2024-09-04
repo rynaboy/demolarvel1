@@ -41,6 +41,8 @@
                             <option value="1">សមាជិក</option>
                             <option value="2">អនុប្រធាន</option>
                             <option value="3">ប្រធាន</option>
+                            <option value="3">ប្រធាន</option>
+
                         </select>
                     </div>
                     <div class="mb-3">
