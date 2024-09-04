@@ -83,10 +83,15 @@
                 <div class="col-md-6 col-lg-3 mb-3">
                     <p>ព័ត៍មានលំអិត</p>
                     <div class="mb-3">
-                                            </div>
+                  </div>
+
                     <div class="mb-3">
-                        <label for="village" class="form-label">ចំណាកឃុំ</label>
-                        <input type="text" class="form-control" id="village">
+                        <label for="party_role" class="form-label">ភូមិ</label>
+                        <select class="form-select" id="party_role">
+                            <option value="1">សមាជិក</option>
+                            <option value="2">អនុប្រធាន</option>
+                            <option value="3">ប្រធាន</option>
+                        </select>
                     </div>
 
                     <div class="mb-3">
@@ -101,6 +106,10 @@
                     <div class="mb-3">
                         <label for="phone_other" class="form-label">ទូរស័ព្ទ/ផ្សេងៗ</label>
                         <textarea class="form-control" id="phone_other"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="village" class="form-label">ចំណាកឃុំ</label>
+                        <input type="text" class="form-control" id="village">
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">

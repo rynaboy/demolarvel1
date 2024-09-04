@@ -24,9 +24,11 @@ class MemberController extends Controller
      */
     public function create()
     {
-        $title = "បញ្ជូលទិន្នន័យសមាជិក";
 
-        return view("member.create",  ['title' => $title]);
+        
+
+        $this->data['title'] = "បញ្ជូលទិន្នន័យសមាជិក";
+        return view("member.create",  $this->data);
     }
 
     /**
