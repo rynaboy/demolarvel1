@@ -55,57 +55,67 @@ Route::middleware('guest')->group(function () {
 
 // Authenticated Routes
 Route::middleware('auth')->group(function () {
+    // Redirect root to dashboard
     Route::get('/', function () {
         return redirect('/dashboard');
     });
 
-
-
+    // Route to tables view
     Route::get('/tables', function () {
         return view('tables');
     })->name('tables');
 
+    // Route to wallet view
     Route::get('/wallet', function () {
         return view('wallet');
     })->name('wallet');
 
-
+    // Route to profile view
     Route::get('/profile', function () {
         return view('account-pages.profile');
     })->name('profile');
 
+    // Route to handle logout
     Route::post('/logout', [LoginController::class, 'destroy'])
         ->name('logout');
 
+    // Route to user profile
     Route::get('/laravel-examples/user-profile', [ProfileController::class, 'index'])
         ->name('users.profile');
 
+    // Route to update user profile
     Route::put('/laravel-examples/user-profile/update', [ProfileController::class, 'update'])
         ->name('users.update');
 
+    // Route to user management
     Route::get('/laravel-examples/users-management', [UserController::class, 'index'])
         ->name('users-management');
 
-
-
+    // Routes for members
     Route::prefix('members')->group(function () {
-    Route::get('/', [MemberController::class, 'create'])->name('members.create');
-    // Route::get('{id}', [MemberController::class, 'show'])->name('members.show');
-    // Route::post('/', [MemberController::class, 'store'])->name('members.store');
-    // Route::put('{id}', [MemberController::class, 'update'])->name('members.update');
-    // Route::delete('{id}', [MemberController::class, 'destroy'])->name('members.destroy');
+        Route::get('/', [MemberController::class, 'create'])->name('members.create');
+        Route::post('/create_new_member', [MemberController::class, 'create_new_member'])->name('create_new_member');
     });
 
-    Route::prefix('/dashboard')->group(function(){
+    // Routes for dashboard
+    Route::prefix('dashboard')->group(function () {
         Route::get('/', [Dashboard::class, 'index'])->name('dashboard');
     });
 
-    Route::prefix('/settings')->group(function(){
-        Route::get('/commune', [SettingController::class, 'commune'])->name('commune');
-        Route::get('/village/{id}', [SettingController::class, 'village'])->name('village');
+    // Routes for settings
+    Route::prefix('settings')->group(function () {
+        // Routes for commune settings
+        Route::prefix('commune')->group(function () {
+            Route::get('/', [SettingController::class, 'commune'])->name('commune');
+            Route::post('/store', [SettingController::class, 'commune_store'])->name('commune_store');
+            Route::post('/getCommune', [SettingController::class, 'getCommuneAjax'])->name('getCommune');
+        });
 
+        // Routes for village settings
+        Route::prefix('village')->group(function () {
+            Route::get('/{id}', [SettingController::class, 'village'])->name('village');
+            Route::post('/getVillage', [SettingController::class, 'getVillageAjax'])->name('getVillage');
+            Route::post('/store', [SettingController::class, 'village_store'])->name('village_store');
+        });
     });
-
-
-
 });
