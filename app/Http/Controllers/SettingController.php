@@ -30,7 +30,6 @@ class SettingController extends Controller
         ["code" => "09040104", "khmer_name" => "បឹងឃុនឆាង", "name" => "Boeng Khun Chhang", "sub_of" => "90401"],
         ["code" => "09040105", "khmer_name" => "ស្មាច់មានជ័យ", "name" => "Smach Mean Chey", "sub_of" => "90401"],
     ];
-
     $filtered_data = [];
 
     foreach ($datas as $item) {
@@ -38,18 +37,16 @@ class SettingController extends Controller
             $filtered_data[] = $item;
         }
     }
-
     return $filtered_data;
 }
-
-
     public function village($id )
     {
         $this->data['title'] = "បញ្ជីភូមិ";
         $this->data['village'] = $this->village_data($id);
 
-
+        dd($this->data);
         return view('settings.location.village',$this->data);
+        
     }
 
 }

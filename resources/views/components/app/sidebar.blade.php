@@ -3,12 +3,12 @@
     .nav-link-text{
         text-wrap: wrap;
     }
-    ::-webkit-scrollbar {
+    /* ::-webkit-scrollbar {
     display: none;
-}
+} */
 
 </style>
-<aside  class="sidenav navbar navbar-vertical navbar-expand-xs border-0 bg-slate-900 fixed-start "  style="display:block;position:fixed;top:0;bottom:0;;max-width:20rem!important;overflow-y:hidden;padding:0;box-shadow:none; height: 100vh !important;overflow: hidden !important;  ">
+<aside  class="sidenav navbar navbar-vertical navbar-expand-xs border-0 bg-slate-900 fixed-start "  style="display:block;position:fixed;top:0;bottom:0;;max-width:20rem!important;overflow-y:hidden;padding:0;box-shadow:none; height: 100vh !important;overflow: hidden !important; ">
     <div class="sidenav-header">
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
             aria-hidden="true" id="iconSidenav"></i>
@@ -17,7 +17,7 @@
             <span class="font-weight-bold text-lg">ប្រព័ន្ធគ្រប់គ្រងទិន្នន័យសមាជិកបក្ស</span>
         </a>
     </div>
-    <div class="collapse navbar-collapse px-4 " id="sidenav-collapse-main" style="height: 100vh; overflow: hidden !important;overflow-x: hidden; width: 100% !important; ">
+    <div class="collapse navbar-collapse px-4 " id="sidenav-collapse-main" style="height: auto; overflow: hidden !important;overflow-x: hidden; width: 100% !important; ">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link  {{ is_current_route('dashboard') ? 'active' : '' }}"

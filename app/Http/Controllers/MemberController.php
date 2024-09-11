@@ -15,6 +15,15 @@ class MemberController extends Controller
 
         $title = "បញ្ជូលទិន្នន័យសមាជិក";
         return view("member.create", ['title' => $title]);
+        
+        $title = "បញ្ជីភូមិ";
+        return view("member.create", ['title' => $title]);
+
+        // $this->data['village'] = $this->village_data($id);
+        // return view("member.create", $this->data);
+        $villages = village::all(); 
+        return view('member.create', ['villages'=>$villages]);
+       
     }
 
 
@@ -24,9 +33,15 @@ class MemberController extends Controller
      */
     public function create()
     {
-        $title = "បញ្ជូលទិន្នន័យសមាជិក";
 
-        return view("member.create",  ['title' => $title]);
+        $this->data['title'] = "បញ្ជូលទិន្នន័យសមាជិក";
+        // $this->data['village'] = $this->village_data($id);
+        // dd($this->data);
+        return view("member.create",  $this->data);
+
+        // $this->data['title'] = "បញ្ជីភូមិ";
+        // // $this->data['village'] = $this->village_data($id);
+        // return view("member.create", $this->data);
     }
 
     /**
