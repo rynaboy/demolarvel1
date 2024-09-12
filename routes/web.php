@@ -95,11 +95,14 @@ Route::middleware('auth')->group(function () {
     Route::prefix('members')->group(function () {
         Route::get('/', [MemberController::class, 'create'])->name('members.create');
         Route::post('/create_new_member', [MemberController::class, 'create_new_member'])->name('create_new_member');
+        Route::get('/list', [MemberController::class, 'list'])->name('member.list');
+        Route::post('/getMembers', [MemberController::class, 'getMembersAjax'])->name('getMembers');
     });
 
     // Routes for dashboard
     Route::prefix('dashboard')->group(function () {
         Route::get('/', [Dashboard::class, 'index'])->name('dashboard');
+
     });
 
     // Routes for settings

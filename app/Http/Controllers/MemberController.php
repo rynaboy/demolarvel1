@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\SiteController;
 use App\Models\MemberModel;
 use App\Models\HouseModel;
+
 class MemberController extends Controller
 {
 
@@ -15,10 +16,59 @@ class MemberController extends Controller
      */
     public function index()
     {
-
         $title = "បញ្ជូលទិន្នន័យសមាជិក";
         return view("member.create", ['title' => $title]);
     }
+
+    public function list(){
+
+        $this->data['title'] = "បញ្ជីសមាជិក";
+        return view("member.list", $this->data);
+    }
+    public function getMembersAjax(Request $request)
+    {
+        $search = $request->input('search');
+        $sortColumn = $request->input('sort_column', 'id');
+        $sortDirection = $request->input('sort_direction', 'asc');
+        $paginate = $request->input('paginate', 50);
+
+        $validSortColumns = ['id', 'member_id_number', 'member_name'];
+
+        // Validate sort column
+        if (!in_array($sortColumn, $validSortColumns)) {
+            $sortColumn = 'id';
+        }
+
+        // Validate sort direction
+        if (!in_array($sortDirection, ['asc', 'desc'])) {
+            $sortDirection = 'asc';
+        }
+
+        $members = MemberModel::select(
+            'id',
+            'member_id_number as number',
+            'member_name as name',
+            'member_gender as gender',
+            'member_birthday as birthday',
+            'member_place_birth as place_birth',
+            'member_date_in as date_in',
+            'member_id_number_docs as id_number_docs',
+            'member_id_number_docs_number as number_docs_number',
+            'member_role', 'member_office_election as office_election',
+            'member_others as other',
+            'member_id_number as id_number'
+        )
+        ->when($search, function ($query, $search) {
+            return $query->where('member_id_number', 'like', "%{$search}%")
+                         ->orWhere('member_name', 'like', "%{$search}%");
+        })
+        ->orderBy($sortColumn, $sortDirection)
+        ->paginate($paginate);
+
+        return response()->json($members);
+    }
+
+
 
 
 
@@ -75,14 +125,6 @@ class MemberController extends Controller
             "commune_id" => $validated['member_commune_id'],
             "village_id" => $validated['member_village_id']
         ];
-        // dd($house_data);die();
-
-
-
-
-
-        // dd($validated);die();
-
 
         if($validated['member_house_number'] && $validated['member_family_number']){
             $site = new SiteController();
@@ -102,7 +144,7 @@ class MemberController extends Controller
         $member = new MemberModel($member_data);
         $member->save();
 
-       return redirect()->back()->with('success', 'Members created successfully.');
+       return redirect("members/list");
 
 
 
@@ -110,36 +152,7 @@ class MemberController extends Controller
     }
 
 
-    public function store(Request $request)
-    {
-        //
-    }
 
 
-    public function show(member $member)
-    {
-        //
-    }
 
-
-    public function edit(member $member)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, member $member)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(member $member)
-    {
-        //
-    }
 }

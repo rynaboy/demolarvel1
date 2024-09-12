@@ -11,6 +11,7 @@ class MemberModel extends Model
 
     protected $fillable = [
         // ព័ត៍មានបថម
+        'id',
         'member_id_number',
         'member_name',
         'member_gender',
