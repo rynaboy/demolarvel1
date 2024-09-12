@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('election_member_history', function (Blueprint $table) {
+        Schema::create('tblelection_member_history', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             // ការិ.
@@ -19,7 +19,7 @@ return new class extends Migration
             // លរ.
             $table->string("emh_no");
             // អត្ត.
-            
+
 
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('election_member_history');
+        Schema::dropIfExists('tblelection_member_history');
     }
 };

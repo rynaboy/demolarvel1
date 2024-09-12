@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [How to install this software / How to set up this project]
 
 ## Installation
@@ -15,3 +16,6 @@
 
 6. sample username & passwrod (`demo@gmail.com` and password `password`)
 
+=======
+# How to installation of this application
+>>>>>>> 43a0f3a871d58c7c693afe8d19cc93d3dd9d9b04

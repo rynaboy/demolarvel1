@@ -1,7 +1,6 @@
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
 <link rel="stylesheet" href="{{ asset('assets/css/corporate-ui-dashboard.css') }}">
-
-
-
 <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 
 

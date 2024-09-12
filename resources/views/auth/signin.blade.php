@@ -7,7 +7,7 @@
                         <div class="col-xl-4 col-md-6 d-flex flex-column mx-auto">
                             <div class="card card-plain mt-8">
                                 <div class="card-header pb-0 text-left bg-transparent text-center">
-                                    <h3 class="font-weight-black text-dark display-6">Welcome back</h3>
+                                    <p class="font-weight-black text-dark">ប្រព័ន្ធគ្រប់គ្រងទិន្នន័យសមាជិកបក្ស</p>
                                 </div>
                                 <div class="text-center">
                                     @if (session('status'))
@@ -55,12 +55,12 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div class="card-footer text-center pt-0 px-lg-2 px-1">
+                                {{-- <div class="card-footer text-center pt-0 px-lg-2 px-1">
                                     <p class="mb-4 text-xs mx-auto">
                                         Don't have an account?
                                         <a href="{{ route('sign-up') }}" class="text-dark font-weight-bold">Sign up</a>
                                     </p>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

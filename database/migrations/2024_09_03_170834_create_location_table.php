@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('location', function (Blueprint $table) {
+        Schema::create('tbllocation', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string("khmer_type"); // ខេត្ត ស្រុក​ ឃុំ ភូមិ ក្រុម
@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string("code");
             $table->string("khmer_name");
             $table->string("name");
-            $table->string("sub_of");
+            $table->string("sub_of")->nullable();
 
         });
     }
