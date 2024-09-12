@@ -44,7 +44,7 @@ class SettingController extends Controller
         $this->data['title'] = "បញ្ជីភូមិ";
         $this->data['village'] = $this->village_data($id);
 
-        dd($this->data);
+        // dd($this->data);
         return view('settings.location.village',$this->data);
         
     }

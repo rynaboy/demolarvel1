@@ -2836,6 +2836,9 @@ a img{
   margin-top: 7px;
   margin-top: 3px !important;
 }
+.form-check{
+  margin-left: -20px;
+}
 
 }
 /* End Media query */
