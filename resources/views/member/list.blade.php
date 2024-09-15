@@ -3,8 +3,6 @@
 <div class="container">
     @include('components/app/navbar', ['title' => $title])
 </div>
-
-
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         <div class="container-fluid py-4 px-5">
 
@@ -74,11 +72,6 @@
                                     </thead>
 
                                     <tbody id ="dataBody">
-
-
-
-
-
 
                                     </tbody>
                                 </table>

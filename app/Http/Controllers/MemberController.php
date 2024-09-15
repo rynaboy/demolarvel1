@@ -25,6 +25,16 @@ class MemberController extends Controller
         $this->data['title'] = "បញ្ជីសមាជិក";
         return view("member.list", $this->data);
     }
+     //Start របាយការណ៌ Report
+    public function list_member_cpp(){
+        $this->data['title'] = "បញ្ជីរាយនាមសមាជិកគណបក្សប្រជាជនកម្ពុជា";
+        return view("member.list_member_cpp", $this->data);
+    }
+    public function list_member_not_in_cpp(){
+        $this->data['title'] = "បញ្ជីរាយនាមប្រជាពលរដ្ធពុំទាន់ចូលជាសមាជិកគណបក្សប្រជាជនកម្ពុជា";
+        return view("member.list_member_not_in_cpp", $this->data);
+    }
+     // End របាយការណ៌ Report
     public function getMembersAjax(Request $request)
     {
         $search = $request->input('search');

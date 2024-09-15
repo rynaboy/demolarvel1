@@ -97,6 +97,9 @@ Route::middleware('auth')->group(function () {
         Route::post('/create_new_member', [MemberController::class, 'create_new_member'])->name('create_new_member');
         Route::get('/list', [MemberController::class, 'list'])->name('member.list');
         Route::post('/getMembers', [MemberController::class, 'getMembersAjax'])->name('getMembers');
+    //​​​ របាយការណ៏
+        Route::get('/list_member_cpp', [MemberController::class, 'list_member_cpp'])->name('member.list_member_cpp');
+        Route::get('/list_member_not_in_cpp', [MemberController::class, 'list_member_not_in_cpp'])->name('member.list_member_not_in_cpp');
     });
 
     // Routes for dashboard
