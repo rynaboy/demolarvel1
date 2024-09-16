@@ -150,7 +150,77 @@
                       </table>
                 </div>
             </div>
-            <x-app.footer />
+            {{-- <x-app.footer /> --}}
+            <div class="row">
+                <div class="col-12" >
+                    <div class="footer1" style="display: flex;justify-content:center;margin-left:-50%;gap:35px">
+                        <div>
+                         ប្រ.ដ្ធសរុប​  &nbsp;&nbsp;<span>66</span>
+                        </div>
+                        <div>
+                            នាក់ស្រី <span>34</span> 
+                        </div>
+                        <div>
+                            នាក់,មានអខ៣ <span>35</span> 
+                        </div>
+                        <div >
+                            នាក់,គ្មានអខ៣  <span>31</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer2" style="display: flex;justify-content:center;">
+                    <div style="font-weight:bold;margin-left:-10px">
+                        ចំណាកក្នុងស្រុក <span>៣១</span>
+                    </div>
+                    <div style="margin-left: 55%;display:flex;gap:40px">
+                    <div >
+                        ថ្ងៃ
+                     </div>
+                      <div>
+                         ខែ
+                     </div>
+                     <div>
+                         ឆ្នាំថោះបញ្ចាស័ក ព.ស.២៥៦៧
+                     </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer2" style="display: flex;justify-content:center;">
+                    <div style="font-weight:bold;margin-left:-56px">
+                        ចំណាកក្រៅស្រុក <span>៣១</span>
+                    </div>
+                    <div style="margin-left: 60%;display:flex;gap:40px">
+                    <div >
+                        ថ្ងៃទី
+                     </div>
+                      <div>
+                         ខែ
+                     </div>
+                     <div>
+                        ឆ្នាំ២០២៤
+                     </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer4" style="display: flex;justify-content:center;justify-content:space-between;">
+                       <div class="footer4-left" style="margin-left:48px;font-weight:bold;">
+                         ស្លាប់ <span>២</span>
+                       </div>
+                       <div class="footer4-right" style="font-weight:900;margin-right:80px !important;">
+                        ប្រធានសាខាគណបក្សភូមិបវេល​ <span>២</span>
+                      </div>
+                   </div>
+                </div>
+            </div>
         </div>
     </main>
     <button class="print-button" onclick="print()">Print</button>
@@ -178,7 +248,7 @@ function print() {
     const printWindow = window.open('', '', 'height=600,width=800');
     printWindow.document.open();
     printWindow.document.write('<html><link rel="stylesheet" href="{{ asset('assets/css/corporate-ui-dashboard.css') }}"><link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"> <head>');
-    printWindow.document.write('<style>body{ zoom:80%;font-family:Battambang;margin-left:-45px;};</style>');
+    printWindow.document.write('<style>body{zoom:80%;font-family:Battambang;margin-left:-47px;};</style>');
     printWindow.document.write('</head><body >');
     printWindow.document.write(document.getElementById('report').innerHTML);
     printWindow.document.write('</body></html>');

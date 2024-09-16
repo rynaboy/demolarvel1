@@ -219,8 +219,97 @@
                 </div>
             </div>
 
-            <x-app.footer />
-            
+            {{-- <x-app.footer /> --}}
+            <div class="row">
+                <div class="col-12" >
+                    <div class="footer1" style="display: flex;justify-content:center;justify-content:space-between;margin-left:-20px">
+                        <div>
+                            សម្គាល់: &nbsp;&nbsp;&nbsp;ខ្នងផ្ទះ​ <span>6,</span>
+                        </div>
+                         <div>
+                            គ្រួសារ <span> 6,</span>
+                        </div>
+                        <div>
+                            ស.ជិសរុប <span>11</span> នាក់
+                        </div>
+                        <div>
+                            ស្រី <span>6</span> នាក់
+                        </div>
+                        <div>
+                            អខ៣ចំនួន: <span>10</span>
+                        </div>
+                        <div >
+                            គ្មានអខ៣ចំនួន: <span>1</span>
+                        </div>
+                        <div >
+                            ចំណាក់ឃំុ <span>៣</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer2" style="display: flex;justify-content:center;justify-content:space-between;margin-left:80px">
+                    <div>
+                       ថ្ងៃ
+                    </div>
+                     <div>
+                        ខែ
+                    </div>
+                    <div>
+                        ឆ្នាំថោះបញ្ចាស័ក ព.ស.២៥៦៧
+                    </div>
+                    <div>
+                        ថ្ងៃ
+                     </div>
+                      <div>
+                         ខែ
+                     </div>
+                     <div>
+                         ឆ្នាំថោះបញ្ចាស័ក ព.ស.២៥៦៧
+                     </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12" style="display: flex;justify-content:space-between">
+                     <div class="date-left" style="display: flex;margin-left:130px;gap:50px">
+                        <div>
+                            ថ្ងៃទី
+                         </div>
+                          <div>
+                             ខែ
+                         </div>
+                         <div>
+                             ឆ្នាំ២០២៤
+                         </div>
+                     </div>
+                     <div class="date-right" style="display: flex;gap:50px;margin-right:100px !important">
+                        <div>
+                            ថ្ងៃទី
+                         </div>
+                          <div>
+                             ខែ
+                         </div>
+                         <div>
+                             ឆ្នាំ២០២៤
+                         </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer4" style="display: flex;justify-content:center;justify-content:space-between;">
+                       <div class="footer4-left" style="margin-left: 170px">
+                          ប្រធានសាខាគណបក្សភូមិបវេល​ <span>២</span>
+                       </div>
+                       <div class="footer4-right" style="margin-right: 200px !important">
+                          ប្រធានក្រុមបក្សទី <span>២</span>
+                      </div>
+                   </div>
+                </div>
+            </div>
         </div>
     </main>
     <button class="print-button" onclick="print()">Print</button>
@@ -233,7 +322,7 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        margin-left: 45px;
+        margin-left: 25px;
         margin-top:-20px !important;
     }
     button:hover {
