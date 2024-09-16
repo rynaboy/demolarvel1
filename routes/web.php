@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\ReportController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -97,9 +98,13 @@ Route::middleware('auth')->group(function () {
         Route::post('/create_new_member', [MemberController::class, 'create_new_member'])->name('create_new_member');
         Route::get('/list', [MemberController::class, 'list'])->name('member.list');
         Route::post('/getMembers', [MemberController::class, 'getMembersAjax'])->name('getMembers');
-    //​​​ របាយការណ៏
-        Route::get('/list_member_cpp', [MemberController::class, 'list_member_cpp'])->name('member.list_member_cpp');
-        Route::get('/list_member_not_in_cpp', [MemberController::class, 'list_member_not_in_cpp'])->name('member.list_member_not_in_cpp');
+    });
+    
+     //​​​ របាយការណ៏
+    Route::prefix('reports')->group(function () {
+        Route::get('/list_member_cpp_1', [ReportController::class, 'list_member_cpp_1'])->name('reports.list_member_cpp_1');
+        Route::get('/list_member_cpp_2', [ReportController::class, 'list_member_cpp_2'])->name('reports.list_member_cpp_2');
+        Route::get('/list_member_not_in_cpp', [ReportController::class, 'list_member_not_in_cpp'])->name('reports.list_member_not_in_cpp');
     });
 
     // Routes for dashboard

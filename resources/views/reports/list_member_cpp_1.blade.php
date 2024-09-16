@@ -3,14 +3,14 @@
 <div class="container">
     @include('components/app/navbar', ['title' => $title])
 </div>
-    <main class="main-content " style="max-width:1240px ; max-height:1754px ;"id="report">
+    <main class="main-content " style="max-width:1240px ; max-height:1754px ;align-content: center;justify-content:center" id="report">
         <div class="container-fluid py-4 px-5">
          <div class="report-bar" style="display: flex ;justify-content: center; align-items: center;justify-content:space-between">
             <div class="report-bar-left" >
                 <h6>គណះបក្សប្រជាជនកម្ពុជា</h6>
                 <h6>គណះកម្មាធិការគណបក្សឃុំបូវិល</h6>
                 <h6>សាខាគណបក្សភូមិបូវិល <span>២</span></h6> 
-                <h6>ការិយាល័យលេខ​​ <span>0987</span></h6> 
+                <h6>ក្រុមគណបក្សទី​​ <span>២</span></h6> 
             </div>
             <div class="report-bar-img">
             <nav >
@@ -20,155 +20,226 @@
 
             </div>
             <div class="report-bar-right" >
-                <h6 style="font-weight: 400;margin-top:-35px;">ឯករាជ​ សន្តិភាព​ សេរីភាព ប្រជាធិបតេយ្យ</h6>
-                <h6 style="margin-left: 23px;font-weight: 400">អធ្យាក្រឹត ​និងវឌ្ឍនភាពសង្គម</h6>
+                <h6 style="font-weight: 400;margin-top:-35px;">ឯករាជ្យ​ សន្តិភាព​ សេរីភាព ប្រជាធិបតេយ្យ</h6>
+                <h6 style="margin-left: 33px;font-weight: 400">អធ្យាក្រឹត ​និងវឌ្ឍនភាពសង្គម</h6>
             </div>
          </div>
          <div class="row">
-                <div class="col-12">
+                <div class="col-12" >
                     <div>
-                        <h6 class=" text-lg mb-0 " style="text-align:center;font-weight:bold;margin-left:-27px">បញ្ជីរាយនាមប្រជាពលរដ្ធពុំទាន់ចូលជាសមាជិកគណបក្សប្រជាជនកម្ពុជា</h6>
+                        <h6 class=" text-lg mb-0 " style="text-align:center;font-weight:bold;margin-left:-27px">បញ្ជីរាយនាមសមាជិកគណបក្សប្រជាជនកម្ពុជា</h6>
                     </div>
-                    <table class="table table-striped table-bordered" >
+                   
+                    <table class=" table table-bordered">
                         <thead >
                             <tr>
                                 <th data-column="code" data-direction="asc" class="text-secondary text-xs font-weight-semibold opacity-7" style="text-align: left; font-size: 1rem!important; color: black !important; font-weight: bold; width: 2% !important">
                                     ល.រ
                                 </th>
                                 <th data-column="khmer_name" data-direction="asc" class="text-secondary text-xs font-weight-semibold opacity-7 ps-2" style="text-align: center; font-size: 1rem!important; color: black !important; font-weight: bold; ">
-                                    គោត្តនាម-នាម
+                                    រូបថត
                                 </th>
                                 <th data-column="khmer_name" data-direction="asc" class="text-secondary text-xs font-weight-semibold opacity-7 ps-2" style="text-align: center; font-size: 1rem!important; color: black !important; font-weight: bold; ">
-                                    ភេទ
+                                    ព័ត៍មានសមាជិក
                                 </th>
                                 <th data-column="name" data-direction="asc" class="text-secondary text-xs font-weight-semibold opacity-7 ps-2" style="text-align: center; font-size: 1rem!important; color: black !important; font-weight: bold; ">
-                                    ឆ្នាំកំណើត
+                                    ព័ត៍មានគណបក្ស
                                 </th>
                                 <th class="text-center text-secondary text-xs font-weight-semibold opacity-7" style="text-align: center; font-size: 1rem!important; color: black !important; font-weight: bold; ">
-                                    ទីកន្លែងកំណើត
+                                    អត្ត.សបណ្ណ
                                 </th>
                                 <th class="text-center text-secondary text-xs font-weight-semibold opacity-7" style="text-align: center; font-size: 1rem!important; color: black !important; font-weight: bold; ">
-                                    អត្ត.សប
+                                    ព័ត៍មានបោះឆ្នោត
                                 </th>
                                 <th class="text-center text-secondary text-xs font-weight-semibold opacity-7" style="text-align: center; font-size: 1rem!important; color: black !important; font-weight: bold; ">
-                                    ថ្ងៃចូលបក្ស
-                                </th>
-                                <th class="text-center text-secondary text-xs font-weight-semibold opacity-7" style="text-align: center; font-size: 1rem!important; color: black !important; font-weight: bold; ">
-                                    ក្រុម
-                                </th>
-                                <th class="text-center text-secondary text-xs font-weight-semibold opacity-7" style="text-align: center; font-size: 1rem!important; color: black !important; font-weight: bold; ">
-                                    តួនាទីបក្ស
-                                </th>
-                                <th class="text-center text-secondary text-xs font-weight-semibold opacity-7" style="text-align: center; font-size: 1rem!important; color: black !important; font-weight: bold; ">
-                                    ការិ.
-                                </th>
-                                <th class="text-center text-secondary text-xs font-weight-semibold opacity-7" style="text-align: center; font-size: 1rem!important; color: black !important; font-weight: bold; ">
-                                   លរ
-                                </th>
-                                <th class="text-center text-secondary text-xs font-weight-semibold opacity-7" style="text-align: center; font-size: 1rem!important; color: black !important; font-weight: bold; ">
-                                    ទូរស័ព្ទ
+                                    ផ្សេងៗ
                                 </th>
                             </tr>
                         </thead>
                         <tbody style="text-align:center">
                             <tr>
                                 <td>1</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2" style="gap: 5px !important">
+                                   ស៊ីម ស៊ីណាល់   ភេទ: <span>ប្រុស</span>  <br>      
+                                   05/06/1995   អាយុ: <span>58</span>                      
+                                 </td>
+                                <td rowspan="2">
+                                   ថ្ងៃចូល: <span>13/09/24</span><br>
+                                   តួនាទី: <span>ប្រធានក្រុម</span><br>
+                                </td>
+                                <td rowspan="2">
+                                    អ.ខ៣​ <br>
+                                    12345565
+                                </td>
+                                <td rowspan="2">
+                                    ការិ.0559វត្តបវេល​ <br>
+                                    លរ.467 អត្ត.00-345-456
+                                </td>
+                                <td rowspan="2"></td>
+                              </tr>
 
-                                <td>ស៊ីម ស៊ីណាល់</td>
-                                 <td >ប</td>
-                                <td >
-                                   13/09/24
+                              <tr>
+                                <td ><a href="#" style="color: blue;">111</a></td>
+                              </tr>
+                                <td>2</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2" style="gap: 5px !important">
+                                   ស៊ីម ស៊ីណាល់   ភេទ: <span>ប្រុស</span>  <br>      
+                                   05/06/1995   អាយុ: <span>58</span>                      
+                                 </td>
+                                <td rowspan="2">
+                                   ថ្ងៃចូល: <span>13/09/24</span><br>
+                                   តួនាទី: <span>ប្រធានក្រុម</span><br>
                                 </td>
-                                <td>
-                                   បាត់ដំបង
+                                <td rowspan="2">
+                                    អ.ខ៣​ <br>
+                                    12345565
                                 </td>
-                                <td >
-                                    00345456
+                                <td rowspan="2">
+                                    ការិ.0599វត្តបវេល​ <br>
+                                    លរ.467 អត្ត.00-345-456
                                 </td>
-                                <td > 13/09/24</td>
-                                <td></td>
-                                <td></td>
-                                <td>08454</td>
-                                <td>4</td>
-                                <td>មិនស្គាល់</td>
+                                <td rowspan="2"></td>
+                              </tr>
+
+                              <tr>
+                                <td ><a href="#" style="color: blue;">112</a></td>
                               </tr>
                               <tr>
                                 <td>1</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2" style="gap: 5px !important">
+                                   ស៊ីម ស៊ីណាល់   ភេទ: <span>ប្រុស</span>  <br>      
+                                   05/06/1995   អាយុ: <span>58</span>                      
+                                 </td>
+                                <td rowspan="2">
+                                   ថ្ងៃចូល: <span>13/09/24</span><br>
+                                   តួនាទី: <span>ប្រធានក្រុម</span><br>
+                                </td>
+                                <td rowspan="2">
+                                    អ.ខ៣​ <br>
+                                    12345565
+                                </td>
+                                <td rowspan="2">
+                                    ការិ.0559វត្តបវេល​ <br>
+                                    លរ.467 អត្ត.00-345-456
+                                </td>
+                                <td rowspan="2"></td>
+                              </tr>
 
-                                <td>ស៊ីម ស៊ីណាល់</td>
-                                 <td >ប</td>
-                                <td >
-                                   13/09/24
+                              <tr>
+                                <td ><a href="#" style="color: blue;">111</a></td>
+                              </tr>
+                                <td>2</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2" style="gap: 5px !important">
+                                   ស៊ីម ស៊ីណាល់   ភេទ: <span>ប្រុស</span>  <br>      
+                                   05/06/1995   អាយុ: <span>58</span>                      
+                                 </td>
+                                <td rowspan="2">
+                                   ថ្ងៃចូល: <span>13/09/24</span><br>
+                                   តួនាទី: <span>ប្រធានក្រុម</span><br>
                                 </td>
-                                <td>
-                                   បាត់ដំបង
+                                <td rowspan="2">
+                                    អ.ខ៣​ <br>
+                                    12345565
                                 </td>
-                                <td >
-                                    00345456
+                                <td rowspan="2">
+                                    ការិ.0599វត្តបវេល​ <br>
+                                    លរ.467 អត្ត.00-345-456
                                 </td>
-                                <td > 13/09/24</td>
-                                <td></td>
-                                <td></td>
-                                <td>08454</td>
-                                <td>4</td>
-                                <td>0103021721</td>
+                                <td rowspan="2"></td>
+                              </tr>
+
+                              <tr>
+                                <td ><a href="#" style="color: blue;">112</a></td>
                               </tr>
                               <tr>
                                 <td>1</td>
-
-                                <td>ស៊ីម ស៊ីណាល់</td>
-                                 <td >ប</td>
-                                <td >
-                                   13/09/24
+                                <td rowspan="2"></td>
+                                <td rowspan="2" style="gap: 5px !important">
+                                   ស៊ីម ស៊ីណាល់   ភេទ: <span>ប្រុស</span>  <br>      
+                                   05/06/1995   អាយុ: <span>58</span>                      
+                                 </td>
+                                <td rowspan="2">
+                                   ថ្ងៃចូល: <span>13/09/24</span><br>
+                                   តួនាទី: <span>ប្រធានក្រុម</span><br>
                                 </td>
-                                <td>
-                                   បាត់ដំបង
+                                <td rowspan="2">
+                                    អ.ខ៣​ <br>
+                                    12345565
                                 </td>
-                                <td >
-                                    00345456
+                                <td rowspan="2">
+                                    ការិ.0559វត្តបវេល​ <br>
+                                    លរ.467 អត្ត.00-345-456
                                 </td>
-                                <td > 13/09/24</td>
-                                <td></td>
-                                <td></td>
-                                <td>08454</td>
-                                <td>4</td>
-                                <td>មិនស្គាល់</td>
+                                <td rowspan="2"></td>
                               </tr>
-                              
+
+                              <tr>
+                                <td ><a href="#" style="color: blue;">111</a></td>
+                              </tr>
+                                <td>2</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2" style="gap: 5px !important">
+                                   ស៊ីម ស៊ីណាល់   ភេទ: <span>ប្រុស</span>  <br>      
+                                   05/06/1995   អាយុ: <span>58</span>                      
+                                 </td>
+                                <td rowspan="2">
+                                   ថ្ងៃចូល: <span>13/09/24</span><br>
+                                   តួនាទី: <span>ប្រធានក្រុម</span><br>
+                                </td>
+                                <td rowspan="2">
+                                    អ.ខ៣​ <br>
+                                    12345565
+                                </td>
+                                <td rowspan="2">
+                                    ការិ.0599វត្តបវេល​ <br>
+                                    លរ.467 អត្ត.00-345-456
+                                </td>
+                                <td rowspan="2"></td>
+                              </tr>
+
+                              <tr>
+                                <td ><a href="#" style="color: blue;">112</a></td>
+                              </tr>
                         </tbody>
-                      </table>
+                    </table>
                 </div>
             </div>
 
             <x-app.footer />
             
         </div>
-        {{-- <div id="pagination" class="d-flex justify-content-end m-3"></div> --}}
     </main>
-    <button class="print-button" onclick="printForm()">Print</button>
-    <style>
-        button {
-        /* margin: 20px; */
-        padding: 10px;
-        background-color: #9d9e9d;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-left: 45px;
-    }
-    
-    button:hover {
-        background-color: #121712;
-    }
-    </style>
+    <button class="print-button" onclick="print()">Print</button>
+ {{--start style button --}}
+<style>
+    button {
+    padding: 10px;
+    background-color: #9d9e9d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 45px;
+    margin-top:-20px !important;
+}
+button:hover {
+    background-color: #121712;
+}
+
 </style>
+{{-- end style button  --}}
+
+{{-- start script func print --}}
 <script>
-function printForm() {
+function print() {
     const printWindow = window.open('', '', 'height=600,width=800');
     printWindow.document.open();
     printWindow.document.write('<html><link rel="stylesheet" href="{{ asset('assets/css/corporate-ui-dashboard.css') }}"><link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"> <head>');
-    printWindow.document.write('<style>body{ font-family:Battambang; }  </style>');
+    printWindow.document.write('<style>body{zoom:80%;font-family:Battambang;margin-left:-10px; }  </style>');
     printWindow.document.write('</head><body >');
     printWindow.document.write(document.getElementById('report').innerHTML);
     printWindow.document.write('</body></html>');
@@ -177,8 +248,7 @@ function printForm() {
     printWindow.print();
 }
 </script>
-
-
+{{-- End script func print --}}
 
 <script>
     let currentPage = 1;

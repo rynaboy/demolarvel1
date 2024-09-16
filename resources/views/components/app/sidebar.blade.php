@@ -109,14 +109,20 @@
                 </div>
             </li>
             <li class="nav-item border-start my-0 pt-2">
-                <a class="nav-link position-relative ms-0 ps-2 py-2 {{ is_current_route('member.list_member_cpp') ? 'active' : '' }}"
-                    href="{{ route('member.list_member_cpp') }}">
-                    <span class="nav-link-text ms-1" style="text-wrap: wrap"> បញ្ជីរាយនាមសមាជិកគណបក្សប្រជាជនកម្ពុជា</span>
+                <a class="nav-link position-relative ms-0 ps-2 py-2 {{ is_current_route('reports.list_member_cpp_1') ? 'active' : '' }}"
+                    href="{{ route('reports.list_member_cpp_1') }}">
+                    <span class="nav-link-text ms-1" style="text-wrap: wrap"> បញ្ជីរាយនាមសមាជិកគណបក្សប្រជាជនកម្ពុជា១</span>
                 </a>
             </li>
             <li class="nav-item border-start my-0 pt-2">
-                <a class="nav-link position-relative ms-0 ps-2 py-2 {{ is_current_route('member.list_member_not_in_cpp') ? 'active' : '' }}"
-                    href="{{ route('member.list_member_not_in_cpp') }}">
+                <a class="nav-link position-relative ms-0 ps-2 py-2 {{ is_current_route('reports.list_member_cpp_2') ? 'active' : '' }}"
+                    href="{{ route('reports.list_member_cpp_2') }}">
+                    <span class="nav-link-text ms-1" style="text-wrap: wrap"> បញ្ជីរាយនាមសមាជិកគណបក្សប្រជាជនកម្ពុជា២</span>
+                </a>
+            </li>
+            <li class="nav-item border-start my-0 pt-2">
+                <a class="nav-link position-relative ms-0 ps-2 py-2 {{ is_current_route('reports.list_member_not_in_cpp') ? 'active' : '' }}"
+                    href="{{ route('reports.list_member_not_in_cpp') }}">
                     <span class="nav-link-text ms-1 " style="text-wrap: wrap"> បញ្ជីរាយនាមប្រជាពលរដ្ធមិនទាន់ចូលជាសមាជិកគណបក្សប្រជាជនកម្ពុជា</span>
                 </a>
             </li>
