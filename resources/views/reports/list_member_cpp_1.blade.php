@@ -3,7 +3,7 @@
 <div class="container">
     @include('components/app/navbar', ['title' => $title])
 </div>
-    <main class="main-content " style="max-width:1240px ; max-height:1754px ;align-content: center;justify-content:center" id="report">
+    <main class="main-content " style="zoom:70%;margin-left:13%;max-width:1240px ; max-height:1754px ;align-content: center;justify-content:center;" id="report">
         <div class="container-fluid py-4 px-5">
          <div class="report-bar" style="display: flex ;justify-content: center; align-items: center;justify-content:space-between">
             <div class="report-bar-left" >
@@ -307,8 +307,8 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 45px;
-    margin-top:-20px !important;
+    margin-left: 190px;
+    margin-top:-5px !important;
 }
 button:hover {
     background-color: #121712;

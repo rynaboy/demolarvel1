@@ -1,10 +1,10 @@
 <div class="container">
     @include('components/app/navbar', ['title' => $title])
 </div>
- <main class="main-content " style="max-width:1240px ; max-height:1754px ;"id="report">
+ <main class="main-content " style="zoom:70%;margin-left:15%;max-width:1240px ; max-height:1754px ;"id="report">
         <div class="container-fluid py-4 px-5">
          <div class="report-bar" style="display: flex ;justify-content: center; align-items: center;justify-content:space-between">
-            <div class="report-bar-left" >
+            <div class="report-bar-left" style="margin-left:-17px">
                 <h6>គណះបក្សប្រជាជនកម្ពុជា</h6>
                 <h6>គណះកម្មាធិការគណបក្សឃុំបូវិល</h6>
                 <h6>សាខាគណបក្សភូមិបូវិល <span>២</span></h6> 
@@ -17,7 +17,7 @@
             </nav>
 
             </div>
-            <div class="report-bar-right" >
+            <div class="report-bar-right" style="margin-right: -15px">
                 <h6 style="font-weight: 400;margin-top:-35px;">ឯករាជ្យ​ សន្តិភាព​ សេរីភាព ប្រជាធិបតេយ្យ</h6>
                 <h6 style="margin-left: 33px;font-weight: 400">អធ្យាក្រឹត ​និងវឌ្ឍនភាពសង្គម</h6>
             </div>
@@ -25,7 +25,7 @@
          <div class="row" style="margin-left: -35px">
                 <div class="col-12">
                     <div>
-                        <h6 class=" text-lg mb-0 " style="text-align:center;font-weight:bold;margin-left:-27px">បញ្ជីរាយនាមប្រជាពលរដ្ធពុំទាន់ចូលជាសមាជិកគណបក្សប្រជាជនកម្ពុជា</h6>
+                        <h6 class=" text-lg mb-0 " style="text-align:center;font-weight:bold;margin-left:-27px">បញ្ជីរាយនាមសមាជិកគណបក្សប្រជាជនកម្ពុជា</h6>
                     </div>
                     <table class="table table-bordered">
                         <thead >
@@ -322,8 +322,10 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        margin-left: 25px;
-        margin-top:-20px !important;
+        margin-left: 200px;
+        margin-top:-5px !important;
+        /* margin-left: 25px;
+        margin-top:-20px !important; */
     }
     button:hover {
         background-color: #121712;
