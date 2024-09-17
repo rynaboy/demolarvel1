@@ -138,8 +138,8 @@
                 </div>
             </li>
             <li class="nav-item border-start my-0 pt-2">
-                <a class="nav-link position-relative ms-0 ps-2 py-2 {{ is_current_route('profile') ? 'active' : '' }}"
-                    href="{{ route('profile') }}">
+                <a class="nav-link position-relative ms-0 ps-2 py-2 {{ is_current_route('account_pages_profile') ? 'active' : '' }}"
+                    href="{{ route('account_pages_profile') }}">
                     <span class="nav-link-text ms-1">អ្នកប្រើប្រាស់ក្នុងប្រព័ន្ធ</span>
                 </a>
             </li>

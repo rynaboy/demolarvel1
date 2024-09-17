@@ -72,9 +72,9 @@ Route::middleware('auth')->group(function () {
     })->name('wallet');
 
     // Route to profile view
-    Route::get('/profile', function () {
-        return view('account-pages.profile');
-    })->name('profile');
+    // Route::get('/profile', function () {
+    //     return view('account-pages.profile');
+    // })->name('profile');
 
     // Route to handle logout
     Route::post('/logout', [LoginController::class, 'destroy'])
@@ -127,6 +127,11 @@ Route::middleware('auth')->group(function () {
             Route::get('/{id}', [SettingController::class, 'village'])->name('village');
             Route::post('/getVillage', [SettingController::class, 'getVillageAjax'])->name('getVillage');
             Route::post('/store', [SettingController::class, 'village_store'])->name('village_store');
+        });
+        // Route for account_pages
+        Route::prefix('account_pages_profile')->group(function () {
+            Route::get('/', [SettingController::class, 'account_pages_profile'])->name('account_pages_profile');
+           
         });
     });
 });

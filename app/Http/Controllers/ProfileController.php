@@ -14,7 +14,7 @@ class ProfileController extends Controller
 
         return view('laravel-examples.user-profile', compact('user'));
     }
-
+    
     public function update(Request $request)
     {
         if (config('app.is_demo') && in_array(Auth::id(), [1])) {

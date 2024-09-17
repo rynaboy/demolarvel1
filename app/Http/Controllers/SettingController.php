@@ -18,6 +18,7 @@ class SettingController extends Controller
         return view("settings.location.commune", $this->data);
 
     }
+
     public function getCommuneAjax (Request $request) {
         $search = $request->input('search');
         $sortColumn = $request->input('sort_column', 'code');
@@ -80,9 +81,6 @@ class SettingController extends Controller
 
         return redirect()->back()->with('success', 'Commune created successfully.');
     }
-
-
-
     public function village_store(Request $request){
 
         // Validate the request
@@ -109,8 +107,6 @@ class SettingController extends Controller
         return redirect()->back()->with('success', 'Village created successfully.');
     }
 
-
-
     public function village($id )
     {
         $this->data['title'] = "បញ្ជីភូមិ";
@@ -118,4 +114,9 @@ class SettingController extends Controller
         return view('settings.location.village',$this->data);
     }
 
+     // account_pages_profile
+     public function account_pages_profile(){
+        $this->data['title'] = "អ្នកប្រើប្រាស់ក្នុងប្រព័ន្ធ";
+        return view("settings.location.account_pages_profile", $this->data);
+    }
 }
