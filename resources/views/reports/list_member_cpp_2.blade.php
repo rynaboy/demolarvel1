@@ -301,10 +301,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="footer4" style="display: flex;justify-content:center;justify-content:space-between;">
-                       <div class="footer4-left" style="margin-left: 170px">
+                       <div class="footer4-left" style="margin-left: 170px;font-weight:900">
                           ប្រធានសាខាគណបក្សភូមិបវេល​ <span>២</span>
                        </div>
-                       <div class="footer4-right" style="margin-right: 200px !important">
+                       <div class="footer4-right" style="margin-right: 200px!important;font-weight:900">
                           ប្រធានក្រុមបក្សទី <span>២</span>
                       </div>
                    </div>
@@ -312,27 +312,7 @@
             </div>
         </div>
     </main>
-    <button class="print-button" onclick="print()">Print</button>
-    {{-- start style button print --}}
-    <style>
-        button {
-        padding: 10px;
-        background-color: #9d9e9d;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-left: 200px;
-        margin-top:-5px !important;
-        /* margin-left: 25px;
-        margin-top:-20px !important; */
-    }
-    button:hover {
-        background-color: #121712;
-    }
-    </style>
-    {{-- end style button print --}}
-
+    <button class="btn btn-primary"  onclick="print()" style="margin-left:200px;margin-top:-5px">ព្រីន</button>
     {{-- start script func print --}}
     <script>
     function print() {

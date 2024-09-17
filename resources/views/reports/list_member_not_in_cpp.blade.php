@@ -223,27 +223,7 @@
             </div>
         </div>
     </main>
-    <button class="print-button" onclick="print()">Print</button>
-
-
-    {{-- style button print --}}
-  <style>
-        button {
-        padding: 10px;
-        background-color: #9d9e9d;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-left: 210px;
-        margin-top:-5px !important;
-    }
-    button:hover {
-        background-color: #121712;
-    }
-    </style>
-</style>
-{{-- start script func print --}}
+    <button class="btn btn-primary"  onclick="print()" style="margin-left:210px;margin-top:-5px">ព្រីន</button>
 <script>
 function print() {
     const printWindow = window.open('', '', 'height=600,width=800');
